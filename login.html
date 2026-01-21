@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap | Ruh Durağı</title>
+    <link rel="stylesheet" href="profil-detay.css">
+    <link rel="icon" href="img/psikg.jpg">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Ana Sayfa</a>
+                <h2>Ruh Durağı</h2>
+                <p>Hoş geldiniz, lütfen bilgilerinizi girin.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> E-posta Adresi</label>
+                    <input type="email" id="email" placeholder="ornek@mail.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Şifre</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="login-options">
+                    <label><input type="checkbox"> Beni Hatırla</label>
+                    <a href="#" class="forgot-pass">Şifremi Unuttum</a>
+                </div>
+
+                <button type="submit" class="view-btn">Giriş Yap</button>
+
+             <div class="divider"><span>veya</span></div>
+             
+             <button type="button" class="google-btn">
+               
+                 Google ile Giriş Yap
+             </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Hesabınız yok mu? <a href="#">Hemen Kayıt Ol</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
