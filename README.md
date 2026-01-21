@@ -29,6 +29,4 @@ Ruh Durağı, kullanıcıların ruh sağlığı uzmanlarına kolayca ulaşıp ra
 ## 🔜 Gelecek Planları (Roadmap)
 
 - [ ] **Backend Entegrasyonu:** Node.js ve MongoDB ile gerçek veri saklama.
-- [ ] **Auth Sistemi:** Firebase veya JWT kullanarak gerçek kullanıcı oturum açma.
-- [ ] **Canlı Destek:** Danışanlar ve uzmanlar arası anlık mesajlaşma.
-- [ ] **Ödeme Sistemi:** Online seans ödemeleri için iyzico/Stripe entegrasyonu.
+- [ ] **Auth Sistemi:** Firebase veya JWT kullanarak gerçek kullanıcı oturum açmak.
