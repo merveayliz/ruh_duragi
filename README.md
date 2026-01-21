@@ -30,3 +30,4 @@ Ruh Durağı, kullanıcıların ruh sağlığı uzmanlarına kolayca ulaşıp ra
 
 - [ ] **Backend Entegrasyonu:** Node.js ve MongoDB ile gerçek veri saklama.
 - [ ] **Auth Sistemi:** Firebase veya JWT kullanarak gerçek kullanıcı oturum açmak.
+
