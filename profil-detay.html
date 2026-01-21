@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Profili </title>
+     <link href="img/psikg.jpg" rel="icon">
+    <link rel="stylesheet" href="profil-detay.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>Ruh Durağı</h2>
+            </div>
+            <nav class="side-nav">
+                <small class="nav-title">MENÜ</small>
+                <a href="index.html" class="nav-item">Ana Sayfa</a>
+                <a href="#" class="nav-item active">Psikologlar</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="profile-header card">
+                <img src="" alt="Psikolog" class="detail-img"> 
+                
+                <div class="profile-info">
+                    <h1>Yükleniyor...</h1> 
+                    <p class="specialty">Branş Bilgisi</p>
+                    <button class="appointment-btn">Randevu Al</button>
+                </div>
+            </header>
+
+            <div class="detail-grid">
+                <section class="about card">
+                    <h3>Hakkında ve Eğitim</h3>
+                    <p>Bilgiler hazırlanıyor...</p>
+                </section>
+
+                <section class="reviews-section card">
+                    <h3>Danışan Geri Bildirimleri</h3>
+                    <div class="rating-overview">
+                        <span class="average-rating">4.9</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-list">
+                        <div class="review-card">
+                            <strong>A*** K***</strong>
+                            <p>"Süreci çok profesyonel yönetti, kesinlikle tavsiye ederim."</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+<div id="appointmentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Randevu Oluştur</h2>
+        <p id="modalExpertName">Uzman: </p>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label>Adınız Soyadınız</label>
+                <input type="text" placeholder="Adınızı girin" required>
+            </div>
+            <div class="form-group">
+                <label>Tarih Seçin</label>
+                <input type="date" required>
+            </div>
+            <div class="form-group">
+                <label>Saat Seçin</label>
+                <select required>
+                    <option value="">Saat seçiniz</option>
+                    <option value="09:00">09:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="14:00">14:00</option>
+                </select>
+            </div>
+            <button type="submit" class="view-btn">Randevuyu Onayla</button>
+        </form>
+    </div>
+</div>
+<script src="javascript.js"></script>
+</body>
+</html>
