@@ -1,8 +1,8 @@
-/* 1. Tüm elementleri sıfırla */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Genişlik hesaplamalarını kolaylaştırır */
+    box-sizing: border-box; 
 }
 
 body {
@@ -12,13 +12,11 @@ body {
     min-height: 100vh;
 }
 
-/* 2. Layout (Düzen) Ayarları */
 .app-container {
-    display: flex; /* Sidebar ve Main'i yan yana getirir */
+    display: flex;
     height: 100vh;
 }
 
-/* Sidebar Tasarımı */
 .sidebar {
     width: 250px;
     background-color: #b2f2f5;
@@ -58,20 +56,19 @@ body {
     color: #1a73e8;
 }
 
-/* Sağ İçerik Alanı */
 .main-content {
-    flex: 1; /* Kalan tüm boşluğu doldur */
+    flex: 1;
     padding: 40px;
-    overflow-y: auto; /* İçerik uzarsa sadece burası kayar */
-}/* --- MOBİL UYUMLULUK AYARLARI --- */
+    overflow-y: auto;
+}
 
 @media (max-width: 768px) {
     .app-container {
-        flex-direction: column; /* Yan yana olan Sidebar ve Main'i alt alta getir */
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 100%; /* Sidebar artık tüm genişliği kaplasın */
+        width: 100%; 
         height: auto;
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
@@ -79,62 +76,58 @@ body {
     }
 
     .nav-item {
-        display: inline-block; /* Menü elemanlarını yan yana diz (Mobil menü gibi) */
+        display: inline-block; 
         margin-right: 10px;
         padding: 8px 12px;
         font-size: 0.8rem;
     }
 
     .main-content {
-        padding: 20px; /* Mobilde boşlukları biraz daraltalım ki yer kalsın */
+        padding: 20px; 
     }
 
     .top-header h1 {
-        font-size: 1.5rem; /* Başlığı mobilde biraz küçültelim */
+        font-size: 1.5rem; 
     }
 }
-/* Kartların dizileceği ızgara (Grid) yapısı */
 .expert-grid {
     display: grid;
-    /* Ekran sığdığı sürece minimum 280px genişliğinde kartlar oluştur */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
     padding: 20px 0;
 }
 
-/* Kartın ana kutusu */
 .expert-card {
     background: #fff;
     border-radius: 20px;
     padding: 20px;
-    display: flex; /* İçindeki elemanları esnek yap */
-    flex-direction: column; /* Üst üste diz */
-    justify-content: space-between; /* İçeriği kartın başına ve sonuna yay */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border: 1px solid #f0f0f0;
-    min-height: 400px; /* Kartlara sabit bir minimum yükseklik ver ki hepsi eşit boyda olsun */
+    min-height: 400px; 
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Body kısmının kartın içini doldurmasını sağla */
+    flex-grow: 1;
 }
 
 .bio {
     font-size: 0.85rem;
     color: #64748b;
     line-height: 1.5;
-    margin-bottom: 20px; /* Butonla yazı arasına nefes alacak boşluk bırak */
-    flex-grow: 1; /* Yazı kısa kalsa bile butonu en alta iter */
+    margin-bottom: 20px;
+    flex-grow: 1; 
 }
 
 .expert-card:hover {
-    transform: translateY(-10px); /* Üzerine gelince hafif yukarı kalksın */
+    transform: translateY(-10px); 
     box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
-/* Profil Resmi */
 .expert-img {
     width: 80px;
     height: 80px;
@@ -143,7 +136,6 @@ body {
     border: 3px solid #e8f0fe;
 }
 
-/* Müsait/Meşgul Rozeti */
 .status-badge {
     float: right;
     font-size: 0.7rem;
@@ -154,7 +146,6 @@ body {
     font-weight: bold;
 }
 
-/* Etiketler (Tags) */
 .tags span {
     display: inline-block;
     background: #f1f5f9;
@@ -165,7 +156,6 @@ body {
     margin: 5px 5px 10px 0;
 }
 
-/* İncele Butonu */
 .view-btn {
     width: 100%;
     padding: 12px;
@@ -181,7 +171,8 @@ body {
 
 .view-btn:hover {
     background: #1557b0;
-}/* Durum rozetleri için renk farkı */
+}
+
 .status-badge.busy {
     background: #fff5f5;
     color: #e53e3e;
@@ -221,18 +212,16 @@ body {
 
 .review-stars {
     color: #f1c40f;
-}/* --- PROFIL DETAY SAYFASI ÖZEL YERLEŞİM --- */
+}
 
-/* 1. Büyük resmi kontrol altına alalım */
 .detail-img {
-    width: 250px; /* Fotoğrafı makul bir boyuta çektik */
+    width: 250px; 
     height: 250px;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* 2. Kart Yapısı (Eğer card class'ı için stilin yoksa ekle) */
 .card {
     background: white;
     padding: 25px;
@@ -241,7 +230,6 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* 3. Yan Yana Dizilim (Resim ve İsim yan yana gelsin) */
 .profile-header {
     display: flex;
     align-items: center;
@@ -249,21 +237,19 @@ body {
     margin-bottom: 30px;
 }
 
-/* 4. Alt kısımdaki 'Hakkında' ve 'Yorumlar'ı yan yana getir */
 .detail-grid {
     display: flex;
     gap: 30px;
 }
 
 .about {
-    flex: 2; /* Hakkında kısmı daha geniş olsun */
+    flex: 2; 
 }
 
 .reviews-section {
-    flex: 1; /* Yorumlar kısmı daha dar olsun */
+    flex: 1; 
 }
 
-/* 5. Randevu Butonunu Şıklaştıralım */
 .appointment-btn {
     background: #1a73e8;
     color: white;
@@ -279,20 +265,20 @@ body {
 .appointment-btn:hover {
     background: #1557b0;
     transform: translateY(-2px);
-}/* Modal Arka Planı */
+}
+
 .modal {
-    display: none; /* Başlangıçta gizli */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Arkayı karartır */
-    backdrop-filter: blur(5px); /* Arkayı bulanıklaştırır */
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px); 
 }
 
-/* Modal Kutusu */
 .modal-content {
     background-color: white;
     margin: 10% auto;
@@ -303,7 +289,6 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Kapatma Butonu (X) */
 .close-btn {
     position: absolute;
     right: 20px;
@@ -323,32 +308,31 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
 }
-/* Form elemanlarına tıklandığında renk değişsin */
+
 .form-group input:focus, .form-group select:focus {
     outline: none;
     border-color: #1a73e8;
     box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
 }
 
-/* Onayla butonu için hover efekti */
 .modal-content .view-btn {
     margin-top: 20px;
-    background: #2ecc71; /* Randevu onayı olduğu için yeşil yapabiliriz */
+    background: #2ecc71; 
 }
 
 .modal-content .view-btn:hover {
     background: #27ae60;
 }
-/* --- MOBİL CİHAZLAR İÇİN DÜZENLEME (768px ve altı) --- */
+
 @media (max-width: 768px) {
     .app-container {
-        flex-direction: column; /* Yan yana olan yapıyı alt alta getir */
+        flex-direction: column; 
     }
 
     .sidebar {
-        width: 100%; /* Menü tam genişlik olsun */
+        width: 100%; 
         height: auto;
-        position: static; /* Sabitliği kaldır ki sayfa akışına girsin */
+        position: static; 
         border-right: none;
         border-bottom: 2px solid #060674;
         padding: 10px;
@@ -361,7 +345,7 @@ body {
 
     .side-nav {
         display: flex;
-        flex-wrap: wrap; /* Menü elemanları sığmazsa alt satıra geçsin */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 10px;
     }
@@ -373,40 +357,39 @@ body {
     }
 
     .main-content {
-        padding: 15px; /* Mobilde boşlukları daralt */
+        padding: 15px; 
     }
 
-    /* Uzman Kartları ve Profil Header Mobilde Düzgün Dursun */
     .profile-header {
-        flex-direction: column; /* Resim ve isim alt alta gelsin */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         gap: 20px;
     }
 
     .detail-img {
-        width: 100%; /* Resim telefon genişliğine yayılsın ama çok büyümesin */
+        width: 100%; 
         max-width: 300px;
         height: auto;
     }
 
     .detail-grid {
-        flex-direction: column; /* Hakkında ve Yorumlar alt alta gelsin */
+        flex-direction: column; 
     }
 
-    /* Modal (Randevu Formu) Mobilde Çok Geniş Durmasın */
     .modal-content {
         width: 90%; 
         margin: 20% auto;
         padding: 20px;
     }
 }
+
 .cat-btn.active {
     background-color: #060674;
     color: white;
     border-color: #060674;
 }
-/* Filtre Butonları Daha Şık Dursun */
+
 .categories {
     display: flex;
     gap: 15px;
@@ -419,7 +402,7 @@ body {
     border: 2px solid #060674;
     background: white;
     color: #060674;
-    border-radius: 50px; /* Yuvarlak butonlar */
+    border-radius: 50px; 
     cursor: pointer;
     font-weight: 600;
     transition: 0.3s;
@@ -437,7 +420,6 @@ body {
 .expert-card.hidden {
     display: none !important;
 }
-/* --- GİRİŞ SAYFASI ÖZEL STİLLERİ --- */
 
 .login-body {
     background: linear-gradient(135deg, #83e0e0 0%, #b2f2f5 100%);
@@ -516,10 +498,8 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-/* --- GİRİŞ SAYFASI GELİŞTİRMELERİ --- */
 
 .login-body {
-    /* Görseli sildik, sadece yumuşak bir renk geçişi bıraktık */
     background: linear-gradient(135deg, #73dada 0%, #aaebef 100%);
     display: flex;
     justify-content: center;
@@ -528,7 +508,6 @@ body {
     margin: 0;
 }
 
-/* Ara Çizgi (Veya kısmı) */
 .divider {
     display: flex;
     align-items: center;
@@ -548,7 +527,6 @@ body {
     padding: 0 10px;
 }
 
-/* Google Butonu */
 .google-btn {
     width: 100%;
     padding: 12px;
@@ -573,7 +551,6 @@ body {
     background: #757c84;
     border-color: #cbd5e1;
 }
-/* --- RANDEVU SAYFASI STİLLERİ --- */
 
 .appointment-table {
     width: 100%;
@@ -611,7 +588,6 @@ body {
     color: white;
 }
 
-/* Durum rozeti zaten CSS'inde vardı ama tablo içinde daha güzel dursun */
 .appointment-table .status-badge {
     display: inline-block;
     padding: 5px 10px;
