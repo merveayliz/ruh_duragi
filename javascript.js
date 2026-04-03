@@ -1,4 +1,4 @@
-// 1. Uzman Bilgileri Veri Seti
+
 const uzmanlar = {
     "1": { isim: "Uzm. Psk. Alp Aydın", 
            brans: "Klinik Psikolog", 
@@ -46,11 +46,9 @@ const uzmanlar = {
            hakkinda: "Koç Üniversitesi Psikoloji, Queen Mary University of London (Master).Gelişim takibi ve stres yönetimi çalışmaktadır.Varoluşçu psikoterapi ve bireysel farkındalık yolculuğu üzerine derinleşmiştir.Varoluşçu psikoterapi ve bireysel farkındalık yolculuğu üzerine derinleşmiştir." }
 };
 
-// --- SAYFA KONTROLLERİ ---
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- FONKSİYON 1: PROFİL DETAY SAYFASI ---
     const urlParams = new URLSearchParams(window.location.search);
     const uzmanId = urlParams.get('id');
     const profileName = document.querySelector(".profile-info h1");
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".about p").innerText = uzman.hakkinda;
     }
 
-    // --- FONKSİYON 2: MODAL İŞLEMLERİ ---
     const modal = document.getElementById("appointmentModal");
     const appointmentBtn = document.querySelector(".appointment-btn");
     const closeBtn = document.querySelector(".close-btn");
@@ -83,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target == modal) modal.style.display = "none";
     };
 
-    // --- FONKSİYON 3: FİLTRELEME (ANA SAYFA) ---
     const filterButtons = document.querySelectorAll(".cat-btn");
     const expertCards = document.querySelectorAll(".expert-card");
 
@@ -111,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- FONKSİYON 4: RANDEVU FORMU GÖNDERİMİ ---
     const appointmentForm = document.getElementById("appointmentForm");
     if (appointmentForm) {
         appointmentForm.onsubmit = function(e) {
@@ -126,13 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Giriş Formu Kontrolü
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
     loginForm.onsubmit = function(e) {
         e.preventDefault();
         const email = document.getElementById("email").value;
         alert("Hoş geldiniz! " + email + " adresi ile giriş yapılıyor...");
-        window.location.href = "index.html"; // Girişten sonra ana sayfaya yönlendir
+        window.location.href = "index.html"; 
     };
 }
