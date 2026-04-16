@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -90,6 +89,7 @@ body {
         font-size: 1.5rem; 
     }
 }
+
 .expert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -242,13 +242,9 @@ body {
     gap: 30px;
 }
 
-.about {
-    flex: 2; 
-}
+.about {flex: 2; }
 
-.reviews-section {
-    flex: 1; 
-}
+.reviews-section {flex: 1;}
 
 .appointment-btn {
     background: #1a73e8;
@@ -301,7 +297,9 @@ body {
 .close-btn:hover { color: black; }
 
 .form-group { margin-bottom: 15px; }
+
 .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; }
+
 .form-group input, .form-group select {
     width: 100%;
     padding: 10px;
