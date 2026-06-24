@@ -10,7 +10,6 @@ body {
     color: #0e0101;
     min-height: 100vh;
 }
-
 .app-container {
     display: flex;
     height: 100vh;
