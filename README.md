@@ -2,6 +2,8 @@
 
 Ruh Durağı, kullanıcıların ruh sağlığı uzmanlarına kolayca ulaşıp randevu planlayabildikleri, kullanıcı dostu ve modern arayüze sahip bir web platformudur. Bu proje, kullanıcı deneyimi (UX) odaklı bir Frontend çalışması olarak tasarlanmıştır.
 
+
+
 ## 🚀 Özellikler
 
 - **Dinamik Uzman Listesi:** Klinik psikolog, çocuk ve ergen uzmanları gibi kategorilere göre filtreleme sistemi.
@@ -9,6 +11,8 @@ Ruh Durağı, kullanıcıların ruh sağlığı uzmanlarına kolayca ulaşıp ra
 - **Randevu Yönetim Paneli:** Kullanıcıların aktif randevularını görebileceği ve iptal edebileceği şık bir dashboard.
 - **Modern Giriş Ekranı:** Sosyal medya (Google) entegrasyonu simülasyonu içeren, responsive giriş sayfası.
 - **Tam Duyarlı (Responsive) Tasarım:** Mobil, tablet ve masaüstü cihazlarla tam uyumlu arayüz.
+
+
 
 ## 🛠 Kullanılan Teknolojiler
 
